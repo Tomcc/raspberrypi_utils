@@ -1,4 +1,0 @@
-#!/bin/bash
-
-sudo apt-get dist-upgrade
-run_omxplayer.py -U
