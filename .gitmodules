@@ -1,0 +1,3 @@
+[submodule "rCPU"]
+	path = rCPU
+	url = https://github.com/davidsblog/rCPU.git
