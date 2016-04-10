@@ -1,0 +1,7 @@
+#!/bin/bash
+
+sudo find /home/pi/Music -type d -exec chmod 755 {} \;
+sudo find /home/pi/Music -type f -exec chmod 644 {} \;
+sudo chown -R pi:pi /home/pi/Music/*
+
+sudo mopidyctl local scan

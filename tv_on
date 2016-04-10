@@ -1,0 +1,13 @@
+#!/bin/bash
+
+echo "on 0" | cec-client -s > /dev/null
+echo "as" | cec-client -s > /dev/null
+tvservice -p
+
+ps cax | grep lightdm > /dev/null
+if [ $? -eq 0 ]; then
+  sudo pkill lightdm #this actually reboots it after tvservice kills it
+else
+  sudo startx </dev/null &>/dev/null &
+fi
+

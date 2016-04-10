@@ -1,0 +1,4 @@
+#!/bin/bash
+
+sudo pkill synergyc
+synergyc `echo $SSH_CLIENT |awk '{ print $1}'`
