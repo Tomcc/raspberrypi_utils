@@ -1,0 +1,24 @@
+
+<script>
+function post(path, params, method) {
+   	var data = {}
+    for(var key in params) {
+        if(params.hasOwnProperty(key)) {
+        	data[key] = params[key];
+        }
+    }
+
+    var request = new XMLHttpRequest();
+	request.open("POST", "index.html", true);
+	request.setRequestHeader("Accept","text/plain");
+	request.send(JSON.stringify(data));
+
+	alert("sent")
+}
+</script>
+
+<button onclick="post('/', {command: 'tv_off'})">Turn TV Off</button>
+<button onclick="post('/', {command: 'tv_on'})">Turn TV On</button>
+<button onclick="post('/', {command: 'scan_music'})">Scan new music</button>
+<button onclick="post('/', {command: 'start_synergy'})">Start Synergy</button>
+
