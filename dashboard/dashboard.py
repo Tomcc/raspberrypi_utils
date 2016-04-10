@@ -20,10 +20,11 @@ class HTTPRequestHandler(http.server.SimpleHTTPRequestHandler):
 		if req["command"] == "tv_off":
 			print("SHUT OFF TV")
 		if req["command"] == "tv_on":
-
+			print("SHUT OFF TV")
 		if req["command"] == "scan_music":
-
+			print("SHUT OFF TV")
 		if req["command"] == "start_synergy":
+			print("SHUT OFF TV")
 		else:
 			print("Command not recognized")
 
